@@ -5,18 +5,28 @@
 
 export class Triangle {
   constructor(...sides) {
-    throw new Error('Remove this statement and implement this function');
+    this.side1 = sides[0];
+    this.side2 = sides[1];
+    this.side3 = sides[2];
   }
 
   get isEquilateral() {
-    throw new Error('Remove this statement and implement this function');
+    return(this.side1 === this.side2 && this.side2 === this.side3 && (this.side1 + this.side2 + this.side3 !== 0))
   }
 
   get isIsosceles() {
-    throw new Error('Remove this statement and implement this function');
+    return(this.side1 === this.side2 || this.side2 === this.side3 || this.side3 === this.side1) 
+      && (this.side1 + this.side2 + this.side3 !== 0) 
+      && (this.side1 + this.side2 >= this.side3) 
+      && (this.side2 + this.side3 >= this.side1) 
+      && (this.side3 + this.side1 >= this.side2)
   }
 
   get isScalene() {
-    throw new Error('Remove this statement and implement this function');
+    return(this.side1 !== this.side2 && this.side2 !== this.side3 && this.side3 !== this.side1) 
+    && (this.side1 + this.side2 + this.side3 !== 0) 
+    && (this.side1 + this.side2 >= this.side3) 
+    && (this.side2 + this.side3 >= this.side1) 
+    && (this.side3 + this.side1 >= this.side2)
   }
 }
