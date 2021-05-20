@@ -4,7 +4,8 @@
 //
 
 export const toRna = (input) => {
-  const dna = input.split('');
+  // const dna = input.split('');
+  const dna = [...input]
   const rna = [];
   dna.forEach(nucleotide => {
     if(nucleotide === 'G'){
